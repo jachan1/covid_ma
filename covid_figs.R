@@ -28,7 +28,7 @@ for(i in 1:days_since){
     
   } else {
     shts <- excel_sheets(sv_fl)
-    county_data <- read_excel(sv_fl, sheet=grep("city_town_data", shts, value=T, ignore.case = T))
+    county_data <- read_excel(sv_fl, sheet=grep("city_town", shts, value=T, ignore.case = T))
     cols <- if("Percent Positivity (Last 14 Days)" %in% names(county_data)){
       c(town = "City/Town",
         tests_total = "Total Tested (Last 14 days)",
