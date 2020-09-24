@@ -2,3 +2,6 @@
  # .command file needs permissions changed chmod +x covid.command
 cd /Users/jamesbridget/Documents/covid_ma/
 Rscript -e "rmarkdown::render('covid_figs.R', 'html_document', output_file='index.html', clean=T)"
+git add .
+git commit -m "weekly update"
+git push origin master
