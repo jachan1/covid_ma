@@ -1,0 +1,11 @@
+
+cd /Volumes/MGH-Biostats/ATN/AIR-P STUDIES/Dental/Pubs/Primary/code/
+
+Rscript -e "source('https://raw.githubusercontent.com/jachan1/batch_rep/master/UA_rep_extra.R')" ^
+	--args ^
+	rmdfile=dent_analysis_20200928.Rmd ^
+	prefix=dent_figures_ ^
+	outloc="/../docs" ^
+	archive=1 ^
+	portrait=T ^
+	wkloc=""

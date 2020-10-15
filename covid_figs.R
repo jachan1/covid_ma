@@ -102,7 +102,7 @@ covid_all %>%
   geom_line() +
   geom_hline(yintercept=0.05, linetype=2, color="red") + 
   scale_alpha_manual(breaks=c("p", "s"), values=c(1, 0.5), guide=F) + 
-  scale_y_continuous(labels = scales::percent_format(accuracy = 1)) + 
+  scale_y_continuous(breaks=c(1:10, seq(20, 100, 10))/100, labels = scales::percent_format(accuracy = 1)) + 
   theme_minimal() + 
   theme(axis.text.x = element_text(angle=30, hjust=1)) +
   ylab("Percent of tests returned positive") + 
