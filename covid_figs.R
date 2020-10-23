@@ -58,7 +58,8 @@ all_fls <- list.files(file.path(covid_hist_fldr, "saved_data"), full.names = T, 
 
 covid_all_raw <- lapply(all_fls, function(fl) {
   read.csv(fl, stringsAsFactors = F) %>% 
-    mutate(tests_pos = as.numeric(gsub("<5", "2", tests_pos)))
+    mutate(tests_pos = as.numeric(gsub("<5", "2", tests_pos)),
+           across(c(tests_total, tests_posn), as.numeric))
 }) %>% 
   bind_rows()
 
