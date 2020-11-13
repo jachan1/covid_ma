@@ -41,6 +41,10 @@ for(i in 1:days_since){
       c(town = "City/Town",
         tests_total = "Total tests last 14 days",
         tests_pos = "Two Week Case Count")
+    } else if("Total Tests Last Two Weeks" %in% names(county_data)) {
+      c(town = "City/Town",
+        tests_total = "Total Tests Last Two Weeks",
+        tests_pos = "Total Positive Tests")
     } else {
       next
     }
